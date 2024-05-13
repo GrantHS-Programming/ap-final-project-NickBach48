@@ -12,7 +12,6 @@ struct NewAppApp: App {
     var body: some Scene {
         WindowGroup {
             OpenScreen();
-            ContentView().background(Color.red);
         }
     }
 }
