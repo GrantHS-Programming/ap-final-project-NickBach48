@@ -1,23 +1,23 @@
 //
-//  ContentView.swift
+//  GetTester.swift
 //  NewApp
 //
-//  Created by Nicholas Auerbach on 4/17/24.
+//  Created by Nicholas Auerbach on 5/15/24.
 //
 
 import SwiftUI
 
-struct Response: Codable {
-    var results: [Result]
+struct Response2: Codable {
+    var results2: [Result]
 }
 
-struct Result: Codable {
-    var trackId: Int
-    var trackName: String
-    var collectionName: String
+struct Result2: Codable {
+    var trackId2: Int
+    var trackName2: String
+    var collectionName2: String
 }
 
-struct ContentView: View {
+struct GetTester: View {
     @State private var results = [Result]()
     
     var body: some View {
@@ -49,5 +49,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    GetTester()
 }

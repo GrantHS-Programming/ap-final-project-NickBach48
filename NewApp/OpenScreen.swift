@@ -16,9 +16,6 @@ struct OpenScreen: View {
     @State private var id = 1
     var body: some View {
         NavigationStack{
-            NavigationLink("Click To Start"){
-                ContentView()
-            }
             VStack(spacing: 60){
                 Text(current)
                     .font(.system(size:50))
@@ -27,14 +24,14 @@ struct OpenScreen: View {
                     .fill(update)
                     .padding(20)
                     .overlay(
-                        Button("Click To Start"){
-                        }
-                            .bold()
-                            .font(.system(size:30))
-                            .foregroundColor(.white)
                         
+                        NavigationLink("Click To Start"){
+                            ContentView()
+                        }
+                            .foregroundColor(.white)
+                            .font(.system(size: 25))
                     )
-                Button("Click To Start"){
+                Button("Change"){
                     withAnimation {
                         current = words.randomElement() ?? "APP"
                         update = colors.randomElement() ?? .red
