@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		422095252BD2CA1100F697BD /* OpenScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422095242BD2CA1100F697BD /* OpenScreen.swift */; };
+		427395182BF7B80E00E5A19B /* Page4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427395172BF7B80E00E5A19B /* Page4.swift */; };
 		42B0E6B32BF516BB00B03DF2 /* GetTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B0E6B22BF516BB00B03DF2 /* GetTester.swift */; };
 		42B4577E2BD029F10038495C /* NewAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4577D2BD029F10038495C /* NewAppApp.swift */; };
 		42B457802BD029F10038495C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42B4577F2BD029F10038495C /* ContentView.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		422095242BD2CA1100F697BD /* OpenScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenScreen.swift; sourceTree = "<group>"; };
+		427395172BF7B80E00E5A19B /* Page4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page4.swift; sourceTree = "<group>"; };
 		42B0E6B22BF516BB00B03DF2 /* GetTester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTester.swift; sourceTree = "<group>"; };
 		42B4577A2BD029F10038495C /* NewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B4577D2BD029F10038495C /* NewAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppApp.swift; sourceTree = "<group>"; };
@@ -39,6 +41,7 @@
 		42B457712BD029F10038495C = {
 			isa = PBXGroup;
 			children = (
+				427395172BF7B80E00E5A19B /* Page4.swift */,
 				42B0E6B22BF516BB00B03DF2 /* GetTester.swift */,
 				42B4577C2BD029F10038495C /* NewApp */,
 				42B4577B2BD029F10038495C /* Products */,
@@ -144,6 +147,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				422095252BD2CA1100F697BD /* OpenScreen.swift in Sources */,
+				427395182BF7B80E00E5A19B /* Page4.swift in Sources */,
 				42B0E6B32BF516BB00B03DF2 /* GetTester.swift in Sources */,
 				42B457802BD029F10038495C /* ContentView.swift in Sources */,
 				42B4577E2BD029F10038495C /* NewAppApp.swift in Sources */,

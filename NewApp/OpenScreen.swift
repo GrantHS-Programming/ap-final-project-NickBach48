@@ -31,7 +31,7 @@ struct OpenScreen: View {
                             .foregroundColor(.white)
                             .font(.system(size: 25))
                     )
-                Button("Change"){
+                Button("Change"){   
                     withAnimation {
                         current = words.randomElement() ?? "APP"
                         update = colors.randomElement() ?? .red

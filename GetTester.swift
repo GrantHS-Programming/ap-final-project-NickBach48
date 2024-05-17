@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct Response2: Codable {
-    var results2: [Result]
+struct Response: Codable {
+    var results: [Result]
 }
 
-struct Result2: Codable {
-    var trackId2: Int
-    var trackName2: String
-    var collectionName2: String
+struct Result: Codable {
+    var trackId: Int
+    var trackName: String
+    var collectionName: String
 }
 
 struct GetTester: View {
