@@ -17,11 +17,22 @@ struct GetTester: View {
     @State private var responses = [Response]()
     
     var body: some View {
-        Text("Grades")
+        NavigationLink("Grade Guru"){
+            OpenScreen()
+                .navigationBarBackButtonHidden(true)
+        }
+        .font(.system(size: 30))
+        .foregroundColor(.red)
         List(responses, id: \.id) { item in
                     VStack(alignment: .leading) {
-                        Text(item.name)
-                            .font(.headline)
+                        Grid{
+                            GridRow{
+                                Text(item.name)
+                                    .font(.headline)
+                                Divider()
+                                Text("A+")
+                            }
+                        }
             }
         }
         .task {

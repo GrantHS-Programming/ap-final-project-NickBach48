@@ -26,7 +26,8 @@ struct OpenScreen: View {
                     .overlay(
                         
                         NavigationLink("Click To Start"){
-                            ContentView()
+                            GetTester()
+                            .navigationBarBackButtonHidden(true)
                         }
                             .foregroundColor(.white)
                             .font(.system(size: 25))
