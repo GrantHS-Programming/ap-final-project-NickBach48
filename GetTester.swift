@@ -23,22 +23,22 @@ struct GetTester: View {
         }
         .font(.system(size: 30))
         .foregroundColor(.red)
-        List(responses, id: \.id) { item in
-                    VStack(alignment: .leading) {
-                        Grid{
-                            GridRow{
-                                Text(item.name)
-                                    .font(.headline)
-                                Divider()
-                                Text("A+")
-                            }
+            List(responses, id: \.id) { item in
+                VStack(alignment: .leading) {
+                    Grid{
+                        GridRow{
+                            Text(item.name)
+                                .font(.headline)
+                            Divider()
+                            Text("A+")
                         }
+                    }
+                }
+            }
+            .task {
+                await loadData()
             }
         }
-        .task {
-            await loadData()
-        }
-    }
     func loadData() async {
         guard let url = URL(string: "https://lms.pps.net/api/v1/courses?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ") else {
             print("Invalid URL")

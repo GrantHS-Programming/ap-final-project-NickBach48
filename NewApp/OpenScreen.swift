@@ -15,38 +15,42 @@ struct OpenScreen: View {
     @State private var update = Color.red
     @State private var id = 1
     var body: some View {
-        NavigationStack{
-            VStack(spacing: 60){
-                Text(current)
-                    .font(.system(size:50))
-                
-                Circle()
-                    .fill(update)
-                    .padding(20)
-                    .overlay(
-                        
-                        NavigationLink("Click To Start"){
-                            GetTester()
-                            .navigationBarBackButtonHidden(true)
-                        }
-                            .foregroundColor(.white)
-                            .font(.system(size: 25))
-                    )
-                Button("Change"){   
-                    withAnimation {
-                        current = words.randomElement() ?? "APP"
-                        update = colors.randomElement() ?? .red
-                        id+=1
+            NavigationStack{
+                VStack(spacing: 20){
+                    HStack{
+                        Text(current)
+                            .font(.system(size:50))
+                        Image(.image)
+                            .resizable()
+                            .frame(width: 80, height: 80)
+                            .aspectRatio(contentMode: .fill)
                     }
+                    Circle()
+                        .fill(update)
+                        .padding(20)
+                        .overlay(
+                            
+                            NavigationLink("Click To Start"){
+                                GetTester()
+                                    .navigationBarBackButtonHidden(true)
+                            }
+                                .foregroundColor(Color.white)
+                                .font(.system(size: 25))
+                        )
+                    Button("Change"){
+                        withAnimation {
+                            current = words.randomElement() ?? "APP"
+                            update = colors.randomElement() ?? .red
+                            id+=1
+                        }
+                    }
+                    .buttonStyle(.borderedProminent)
+                    
                 }
-                .buttonStyle(.borderedProminent)
-                
+                .transition(.slide)
+                .id(id)
             }
-            .transition(.slide)
-            .id(id)
-            
         }
-    }
 }
 
 #Preview {
