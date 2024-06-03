@@ -17,12 +17,12 @@ struct GetTester: View {
     @State private var responses = [Response]()
     
     var body: some View {
-        NavigationLink("Grade Guru"){
+        /*NavigationLink("Grade Guru"){
             OpenScreen()
                 .navigationBarBackButtonHidden(true)
         }
-        .font(.system(size: 30))
-        .foregroundColor(.red)
+        .font(.largeTitle)
+        .foregroundColor(.red)*/
             List(responses, id: \.id) { item in
                 VStack(alignment: .leading) {
                     Grid{

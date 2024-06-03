@@ -12,27 +12,19 @@ struct ContentView: View {
     @State private var studentName = "Nick"
     
     var body: some View {
-        VStack(){
-            Text("Grades for " + studentName)
-                .font(.title)
-                .position(CGPoint(x:UIScreen.main.bounds.width/2, y: 60))
-            Grid{
-                GridRow{
-                   Text("Period 1:")
-                    Text("A+")
+        Text("Grade Guru")
+            .font(.largeTitle)
+            .foregroundColor(.red)
+        
+            NavigationStack{
+                NavigationLink("Grades"){
+                    GetTester()
+                        .navigationBarBackButtonHidden(true)
                 }
-                GridRow{
-                    Text("Period 2:")
-                }
-                GridRow{
-                    Text("Period 3:")
-                }
-                GridRow{
-                    Text("Period 4:")
-                }
-            }
-            
-            
+                .foregroundColor(.white)
+                .buttonStyle(.borderedProminent)
+                
+                
         }
     }
 }
