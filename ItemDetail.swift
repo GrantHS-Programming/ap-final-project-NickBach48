@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ItemDetail: View {
-    let item: 
+
+    //let item: Response
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("hello")
     }
 }
 
 #Preview {
-    ItemDetail()
+    ItemDetail()//item: Response.init(from: decodedResponse))
 }

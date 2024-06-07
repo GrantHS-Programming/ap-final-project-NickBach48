@@ -11,25 +11,34 @@ struct Info: Codable{
     var id: Int
     var name: String
     //var points_possible: Int
+    var has_submitted_submissions: Bool
+    
+    func submissionStatus() -> String {
+            return has_submitted_submissions ? "Submitted" : "Not Submitted"
+        }
+    /*func possiblePoints() -> String {
+        return " \(points_possible)"
+    }*/
 }
 
 struct ContentView: View {
     
     @State private var studentName = "Nick"
-    @State private var list = [Info]()
+    @State private var list: [Info] = []
     
     var body: some View {
         Text("Grade Guru")
             .font(.largeTitle)
             .foregroundColor(.red)
-        List(list, id: \.id) { thing in
+        List($list, id: \.id) { $thing in
             VStack(alignment: .leading) {
                 Grid{
                     GridRow{
                         Text(thing.name)
                             .font(.headline)
                         Divider()
-                        //Text(thing.points_possible)
+                        //Text(thing.possiblePoints())
+                        Text(thing.submissionStatus())
                     }
                 }
             }
