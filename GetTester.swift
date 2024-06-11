@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct Response: Codable {
-    var id: Int
     var name: String
+    var course_code: String
+    var id: Int
+    var enrollment_term_id: Int
+    var default_view: String
+    
 }
+extension Response{
+    var myId: String{
+        String(id)}
+    }
 
 
 struct GetTester: View {
@@ -26,7 +34,7 @@ struct GetTester: View {
         .foregroundColor(.red)
             List(responses, id: \.id) { item in
                 NavigationLink{
-                    ContentView()
+                    ItemDetail(item: item)
                 } label: {
                     VStack(alignment: .leading) {
                         Grid{

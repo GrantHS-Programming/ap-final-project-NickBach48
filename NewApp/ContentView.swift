@@ -25,6 +25,7 @@ struct ContentView: View {
     
     @State private var studentName = "Nick"
     @State private var list: [Info] = []
+    let item: Response
     
     var body: some View {
         Text("Grade Guru")
@@ -48,7 +49,12 @@ struct ContentView: View {
         }
     }
     func loadData() async {
-        guard let url = URL(string: "https://lms.pps.net/api/v1/courses/116982/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]") else {
+        /*var urlComponents = URLComponents()
+        urlComponents.scheme = "https"
+        urlComponents.host = "://lms.pps.net"
+        urlComponents.path = "/api/v1/courses/\(item.myId)/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]"*/
+        
+        guard let url = URL(string: "https://lms.pps.net/api/v1/courses/\(item.myId)/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]") else {
             print("Invalid URL")
             return
         }
@@ -65,5 +71,10 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView()
+    ContentView(item: Response(
+        name: "defaultClass",
+        course_code: "mandel-123",
+        id: 12345,
+        enrollment_term_id: 1234,
+        default_view: "modules"))
 }

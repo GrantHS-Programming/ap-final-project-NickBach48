@@ -8,13 +8,21 @@
 import SwiftUI
 
 struct ItemDetail: View {
-
-    //let item: Response
+    
+    let item: Response
     var body: some View {
-        Text("hello")
+        Text(item.name)
+        Text(item.course_code)
+        Text(item.default_view)
+        Text(item.myId)
     }
 }
 
 #Preview {
-    ItemDetail()//item: Response.init(from: decodedResponse))
+    ItemDetail(item: Response(
+        name: "defaultClass",
+        course_code: "mandel-123",
+        id: 12345,
+        enrollment_term_id: 1234,
+        default_view: "modules"))
 }
