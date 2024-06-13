@@ -34,7 +34,7 @@ struct GetTester: View {
         .foregroundColor(.red)
             List(responses, id: \.id) { item in
                 NavigationLink{
-                    ItemDetail(item: item)
+                    ContentView(item: item)
                 } label: {
                     VStack(alignment: .leading) {
                         Grid{

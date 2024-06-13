@@ -49,13 +49,19 @@ struct ContentView: View {
         }
     }
     func loadData() async {
-        /*var urlComponents = URLComponents()
+        var urlComponents = URLComponents()
         urlComponents.scheme = "https"
         urlComponents.host = "://lms.pps.net"
-        urlComponents.path = "/api/v1/courses/\(item.myId)/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]"*/
+        urlComponents.path = "/api/v1/courses/\(item.myId)/assignments/"
+        urlComponents.queryItems = [URLQueryItem(name: "?access_token", value: "8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ")]
+        urlComponents.fragment = "&include[submission]"
         
-        guard let url = URL(string: "https://lms.pps.net/api/v1/courses/\(item.myId)/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]") else {
-            print("Invalid URL")
+        /*print("https://lms.pps.net/api/v1/courses/\(item.myId)/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]")*/
+        
+        guard let url = URL(string: "https://lms.pps.net/api/v1/courses/\(item.myId)/assignments/?access_token=8909~Y0fiFEIFu36NIJiiAr0cWXzlMw3Vb91cI0yBeMdGG40qvTXKJsYl6gNjmyIaeBDJ&include[submission]")
+                                
+            else {
+            print("Invalid")
             return
         }
         do {
@@ -74,7 +80,7 @@ struct ContentView: View {
     ContentView(item: Response(
         name: "defaultClass",
         course_code: "mandel-123",
-        id: 12345,
-        enrollment_term_id: 1234,
+        id: 131930,
+        enrollment_term_id: 116982,
         default_view: "modules"))
 }
